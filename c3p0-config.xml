@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
+<c3p0-config>
+  <named-config name="oracle">
+  	<!-- 连接数据库mysql基本的信息的配置 -->
+    <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+    <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1521:orcl</property>
+    <property name="user">jf190912</property>
+    <property name="password">123456</property>
+    
+    <!-- 若数据库中的连接数量不足的时候，可以向数据库申请的连接数量 -->
+    <property name="acquireIncrement">5</property>
+    <!-- 初始化数据库连接池时的连接数量 -->
+    <property name="initialPoolSize">10</property>
+    <!-- 数据库连接池中的最小的数据库连接数 -->
+    <property name="minPoolSize">5</property>
+     <!-- 数据库连接池中的最大的数据库连接数 -->
+    <property name="maxPoolSize">100</property>
+     <!-- C3P0数据库连接池可以维护的Statement数量 -->
+    <property name="maxStatements">2</property>
+     <!-- 每个连接同时可以使用Statement的数量 -->
+    <property name="maxStatementsPerConnection">5</property>
+    <!-- 数据库连接超时 -->
+    <property name="checkoutTimeout">3000</property>
+    
+  </named-config>
+</c3p0-config>
